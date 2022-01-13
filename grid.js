@@ -33,24 +33,28 @@ function getColor(){
     if(colorSetup == "1"){
         for (i = 0; i < 6; i++){
             color += letters[Math.floor(Math.random() * 16)]
-        }
+        }}
+
     if(colorSetup == "2"){
-    //to create only gray colors use only one random value and every second value F
-    let gray = letters[Math.floor(Math.random() * 16)]
+    //to create only gray colors RGB values must be same example "R= 244 G= 244 B= 244" in hex number this is "#F4F4F4" = "whitesmoke"
+    let gray = letters[Math.floor(Math.random() * 16)];
+    let gray2 = letters[Math.floor(Math.random() * 16)];
     for (i = 0; i < 3; i++){
-        color += "F" + gray;    
+        color += gray + gray2;    
     }}
     
-    }
     if(colorSetup == "3"){
             color = document.getElementById("picker").value;
         }
+
     if(colorSetup == "4"){
         color = "#FFFFFF";
     }
+
     if(colorSetup == "5"){
         reset();
     }
+
    return color;
 }
 // removes dividers after new size of grid is selected
@@ -83,10 +87,10 @@ draw.forEach(grid => {
 //draw grid ends
 
 //select color and reset buttons
-const button = sidebar.querySelectorAll('button');
+const button = document.querySelectorAll('button');
 button.forEach(button => {
     button.addEventListener('click', () => {
-        if(button.id=5){
+        if(button.id == 5){
             reset();
         }
         else{    
