@@ -8,33 +8,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="wrapper">
     <header>
         <h1>Etch a Sketch</h1>
     </header>
-    <main>
-        <div id="sidebar">
+    <div id="sidebar">
             <div class="slidecontainer">
                 <h3>Sketchpad size</h3>
                 <input type="range" min="1" max="80" value="25" class="slider" id="myRange">
+                <output id="demo"></output>
               </div>
             <h3>choose color</h3>
-              <ul>
-                <li><button id="1">Random</button></li>
-                <li><button id="2">Gray</button></li>
-                <li><input type="color" id="picker" value="#000000">
-                    <button id="3">select color</button>
-                    </li>
-                <li><button id="4">Eraser</button></li>
-                <li><button id="5">Reset</button></li>
-            </ul>
-        </div>
+                <button id="1">Random</button>
+                <button id="2">Gray</button>
+                <input type="color" id="picker" value="#000000">
+                <button id="3">select color</button>
+                <button id="4">Eraser</button>
+                <button id="5">Reset</button>
+            
+    </div>
+    <div id="content">
         <div id="container">
 
         </div>
-    </main>
+    </div>
     <footer>
-
+       <h4>This project is part of Odin Project</h4> 
+       <p>DESIGNED & DEVELOPED BY J-PCODE</p>
     </footer>
+</div>
+    
     <script src="grid.js"></script>
 </body>
 </html>
